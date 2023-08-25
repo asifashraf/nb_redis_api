@@ -3,7 +3,7 @@ action=$1
 if [[ -z "$action" || "$action" == "--help" ]]; then
   echo "====== Notebull RUST API ======"
   echo "[] GIT:         commit, status, push"
-  echo "[]:  SERVER     dev"
+  echo "[]:  SERVER     start"
   echo "==============================================================="
 else
  case $action in
@@ -28,10 +28,9 @@ else
 
 
 ## cd poc/create-tauri-app-command
-    "pta.dev")
+    "start")
         source cd-nra.sh
-        cd poc/create-tauri-app-command
-        yarn tauri dev
+        node src/start.js
     ;;
 
 
